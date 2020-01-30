@@ -1,4 +1,4 @@
-div{ 
+/* div{ 
     background-color: aqua;
     padding:1%;
     font-size: large;
@@ -15,4 +15,10 @@ body{
 margin:50 ,20,20,50;
 background-color: cornflowerblue;
 
-}
+} */
+.myNavbar1{
+    position: fixed-top;
+  }
+
+
+  

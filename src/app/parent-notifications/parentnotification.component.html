@@ -1,0 +1,142 @@
+
+
+<div class="bs-example">
+
+
+    <h1 align="center">Children List</h1>
+    <div >
+        <table border="1px" align="center" >
+           <tr style="width: 50;height: 50;">
+               <td style="width: 50;"><b>id</b></td>
+               <td><b>name</b></td>
+               <td><b>age</b></td>
+               <td><b>gender</b></td>
+               <td><b>color</b></td>
+               <td><b>image</b></td>
+               <td><b>health</b></td>
+               <td><b>bloodGroup</b></td>
+              
+    
+    
+               <td></td>
+           </tr>
+         
+            <tr *ngFor="let c of notification" class="table-primary">
+                <td>{{c.child_id}}</td>
+                <td>{{c.child_name}}</td>
+                <td>{{c.age}}</td>
+                <td>{{c.gender}}</td>
+                <td>{{c.color}}</td>
+                <td><img style="height: 70px; width:50%;" src="data:image/jpeg;base64,{{c.imageUrl}}" class="avatar" ></td>
+                <td>{{c.health}}</td>
+                <td>{{c.bloodGroup}}</td>
+    
+            </tr> 
+        </table>
+    </div>
+    </div>
+
+
+    <!-- <div *ngFor="let c of notification">
+<tr>
+    
+        <td>{{c.child_id}}</td>
+        <td>{{c.child_name}}</td>
+        <td>{{c.age}}</td>
+        <td>{{c.gender}}</td>
+        <td>{{c.color}}</td>
+        <td><img style="height: 70px; width:50%;" src="data:image/jpeg;base64,{{c.imageUrl}}" class="avatar" ></td>
+        <td>{{c.health}}</td>
+        <td>{{c.bloodGroup}}</td>
+        </tr>
+    </div>
+  -->
+
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<div class="container">
+    <h3 class="h3">shopping Demo-1 </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-1.jpg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-2.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+               
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Blouse</a></h3>
+                    
+                    <a class="add-to-cart" href="">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-3.jpg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-4.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+             
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                   
+                    <a class="add-to-cart" href="">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-5.jpg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-6.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+              
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                   
+                    <a class="add-to-cart" href="">View Details</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<hr>
+
+
+    
+ 

@@ -1,4 +1,4 @@
-
+<!-- 
 <body>
     <div>
         <br><br>
@@ -208,3 +208,411 @@
     
     </form>
 </body>
+
+
+
+ -->
+
+
+
+    
+
+ <div class="card m-3">
+    <h5 class="card-header">Parent Register</h5>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+ 
+<h3>Marital Details</h3>
+              
+            <div class="form-group ">
+                <label>Marital Status</label>
+                <select formControlName="status" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.status.errors }">
+                    <option selected>Married</option>
+                    <option>Single</option>
+                    <option >Widow</option>
+                    <option>Divorcee</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                    <div *ngIf="f.status.errors.required">Marital Status is required</div>
+                </div>
+            </div>
+
+          
+            <div class="form-group col">
+                <label *ngIf="this.registerForm.value.status=='Married'">
+                <div class="form-group col-2">
+                <label >Married date </label>
+                
+                <input type="date" formControlName="mrgdate" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mrgdate.errors }" />
+                <div *ngIf="submitted && f.mrgdate.errors" class="invalid-feedback">
+                    <div *ngIf="f.mrgdate.errors.required">Date is required</div>
+                </div>
+                
+            </div>
+        </label>
+            </div>
+            
+
+<h3>Applicant Category</h3>
+
+             
+            <div class="form-group col">
+                
+                <div class="form-group col-2">
+                    <label><b>Status: </b></label><br>
+        <label *ngIf="this.registerForm.value.status=='Married'" class="radio-inline">
+             <input type="radio" formControlName="mrdstatus" value="couple" name="mrdstatus"
+                [ngClass]="{ 'is-invalid': submitted && f.mrdstatus.errors }" />  couple 
+        </label>
+        <label *ngIf="this.registerForm.value.status!='Married'"class="radio-inline">
+                <input type="radio" formControlName="mrdstatus" value="male" name="mrdstatus"
+                [ngClass]="{ 'is-invalid': submitted && f.mrdstatus.errors }" /> male
+        </label>
+        <label *ngIf="this.registerForm.value.status!='Married'" class="radio-inline">
+                <input type="radio" formControlName="mrdstatus" value="female" name="mrdstatus"
+                [ngClass]="{ 'is-invalid': submitted && f.mrdstatus.errors }" />female
+        </label>
+                   
+                <div *ngIf="submitted && f.mrdstatus.errors" class="invalid-feedback">
+                    <div *ngIf="f.mrdstatus.errors.required">date is required</div>
+                </div>
+            </div>
+            </div>
+
+
+         
+                   
+<h4>Personal Information</h4>   
+
+<div >
+    <label *ngIf= "this.registerForm.value.mrdstatus=='male' || this.registerForm.value.mrdstatus=='couple'">
+             <div class="form-group col">
+                 <div class="form-group col-2">
+                         <label>Male name </label>
+                         <input type="text" formControlName="maleName" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.maleName.errors }" />
+                        <div *ngIf="submitted && f.maleName.errors" class="invalid-feedback">
+                    <div *ngIf="f.maleName.errors.required">male name is required</div>
+                  </div>
+                 </div>
+             </div>
+
+             
+          <div class="form-group ">
+                <label> Male Nationality</label>
+                <select formControlName="mnationality" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mnationality.errors }">
+                    <option value="Select">Select</option>
+        <option value="INDIAN">INDIAN</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        <option value="AUSTRIA ">AUSTRIA </option>
+        <option value="Bahrain">BAHRAIN</option>
+        <option value="Barbados">BARBADOS</option>
+        <option value="BELGIUM">BELGIUM</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.mnationality.errors" class="invalid-feedback">
+                    <div *ngIf="f.mnationality.errors.required">Nationality is required</div>
+                </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Date of Birth </label>
+                <input type="date" formControlName="mdate" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mdate.errors }" />
+                <div *ngIf="submitted && f.mdate.errors" class="invalid-feedback">
+                    <div *ngIf="f.mdate.errors.required">date is required</div>
+                </div>
+            </div>
+            </div>
+            </label>
+
+</div>
+
+<div>
+    <label  *ngIf= "this.registerForm.value.mrdstatus!='male' || this.registerForm.value.mrdstatus=='couple'">
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                        <label>Female name </label>
+                        <input type="text" formControlName="femaleName" class="form-control"
+                       [ngClass]="{ 'is-invalid': submitted && f.femaleName.errors }" />
+                       <div *ngIf="submitted && f.femaleName.errors" class="invalid-feedback">
+                   <div *ngIf="f.femaleName.errors.required">Female name is required</div>
+                 </div>
+                </div>
+            </div>
+            
+            <div class="form-group ">
+                <label>Female Nationality</label>
+                <select formControlName="fnationality" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fnationality.errors }">
+                    <option value="Select">Select</option>
+        <option value="INDIAN">INDIAN</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        <option value="AUSTRIA ">AUSTRIA </option>
+        <option value="Bahrain">BAHRAIN</option>
+        <option value="Barbados">BARBADOS</option>
+        <option value="BELGIUM">BELGIUM</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.fnationality.errors" class="invalid-feedback">
+                    <div *ngIf="f.fnationality.errors.required">Nationality is required</div>
+                </div>
+            </div>
+
+           
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Date of Birth </label>
+                <input type="date" formControlName="fdate" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.fdate.errors }" />
+                <div *ngIf="submitted && f.fdate.errors" class="invalid-feedback">
+                    <div *ngIf="f.fdate.errors.required">date is required</div>
+                </div>
+            </div>
+            </div>
+        </label>
+            </div>
+
+
+ <h3>Professtioal Details</h3>
+ <div>
+     <label *ngIf= "this.registerForm.value.mrdstatus=='male' || this.registerForm.value.mrdstatus=='couple'">
+            
+            <div class="form-group ">
+                <label>Occupation</label>
+                <select formControlName="foccupation" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.foccupation.errors }">
+           
+                    <option value="Business">Business</option>
+                    <option value="Public Sector">Public Sector</option>
+                    <option value="Private Sector">Private Sector</option>
+                    <option value="N">Not Working</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.foccupation.errors" class="invalid-feedback">
+                    <div *ngIf="f.foccupation.errors.required">Occupation is required</div>
+                </div>
+            </div>
+
+           
+            
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Place of Work </label>
+                <input type="text" formControlName="mworkPlace" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mworkPlace.errors }" />
+                <div *ngIf="submitted && f.mworkPlace.errors" class="invalid-feedback">
+                    <div *ngIf="f.mworkPlace.errors.required">workPlace is required</div>
+                </div>
+            </div>
+            </div>
+
+          
+          
+
+              
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Annual Income(In Rs.) </label>
+                <input type="number" formControlName="mincome" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mincome.errors }" />
+                <div *ngIf="submitted && f.mincome.errors" class="invalid-feedback">
+                    <div *ngIf="f.mincome.errors.required">Income is required</div>
+                </div>
+            </div>
+            </div>
+
+        </label>
+
+        <label *ngIf= "this.registerForm.value.mrdstatus!='male' || this.registerForm.value.mrdstatus=='couple'">
+            <div class="form-group ">
+                <label>Occupation</label>
+                <select formControlName="moccupation" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.moccupation.errors }">
+                    <option value="Select">Select</option>
+                 
+                    <option value="Business">Business</option>
+                    <option value="Public Sector">Public Sector</option>
+                    <option value="Private Sector">Private Sector</option>
+                    <option value="N">Not Working</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.moccupation.errors" class="invalid-feedback">
+                    <div *ngIf="f.moccupation.errors.required">Occupation is required</div>
+                </div>
+          
+            </div>  
+            
+            <div class="form-group col">
+            <div class="form-group col-2">
+                <label>Place of Work </label>
+                <input type="text" formControlName="fworkPlace" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.fworkPlace.errors }" />
+                <div *ngIf="submitted && f.fworkPlace.errors" class="invalid-feedback">
+                    <div *ngIf="f.fworkPlace.errors.required">workPlace is required</div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Annual Income(In Rs.) </label>
+                <input type="number" formControlName="fincome" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.fincome.errors }" />
+                <div *ngIf="submitted && f.fincome.errors" class="invalid-feedback">
+                    <div *ngIf="f.fincome.errors.required">Income is required</div>
+                </div>
+            </div>
+            </div>
+
+        </label>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label> No. of Adopted Children</label>
+                <input type="number" formControlName="noChild" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.noChild.errors }" />
+                <div *ngIf="submitted && f.noChild.errors" class="invalid-feedback">
+                    <div *ngIf="f.noChild.errors.required">No.of Child is required</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Total</label>
+                <input type="number" formControlName="total" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.total.errors }" />
+                <div *ngIf="submitted && f.total.errors" class="invalid-feedback">
+                    <div *ngIf="f.total.errors.required">Total No. is required</div>
+                </div>
+            </div>
+            </div>
+ </div>
+
+ <h3>Contact Details</h3>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Residence Address</label>
+                <input type="address" formControlName="residenceAddress" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.residenceAddress.errors }" />
+                <div *ngIf="submitted && f.residenceAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.residenceAddress.errors.required">Residence Address no is required</div>
+                </div>
+            </div>
+            </div>
+   
+            <div class="form-group ">
+                <label>State</label>
+                <select formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+                    <option selected="selected" value="Select">Select</option>   
+                    <option value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Orissa">Orissa</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="UTTARAKHAND">UTTARAKHAND</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Telangana">Telangana</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                    <div *ngIf="f.state.errors.required">State is required</div>
+                </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>District </label>
+                <input type="text" formControlName="district" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.district.errors }" />
+                <div *ngIf="submitted && f.district.errors" class="invalid-feedback">
+                    <div *ngIf="f.district.errors.required">District is required</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Pin Code</label>
+                <input type="pin" formControlName="pincode" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }" />
+                <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                    <div *ngIf="f.pincode.errors.required">Pincode is required</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Mobile No</label>
+                <input type="text" formControlName="mobileNo" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" />
+                <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
+                    <div *ngIf="f.mobileNo.errors.required">mobile no is required</div>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Email</label>
+                <input type="email" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">email is required</div>
+                    <div *ngIf="f.email.errors.email">email must be valid</div>
+                </div>
+            </div>
+            </div>
+<h4>Identification Details</h4>
+            <div class="form-group col">
+                <div class="form-group col-2">
+                <label>Aadhar card no</label>
+                <input type="number" formControlName="aadharNo" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.aadharNo.errors }" />
+                <div *ngIf="submitted && f.aadharNo.errors" class="invalid-feedback">
+                    <div *ngIf="f.aadharNo.errors.required">aadharNo is required</div>
+                </div>
+            </div>
+            </div>
+
+         
+  <div class="text-center">
+                <button type="submit" class="btn btn-primary mr-1">Register</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+        </form>
+    </div>

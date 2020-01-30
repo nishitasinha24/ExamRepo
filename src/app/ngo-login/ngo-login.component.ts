@@ -19,7 +19,7 @@ export class NgoLoginComponent implements OnInit {
   ngoAuthenticate(user)
   {
     this.service.ngoSignIn(user).then(response=>{
-      console.log(response);
+      //console.log(response);
       let n = new Ngo(response);
       sessionStorage.setItem('ngoid', JSON.stringify(n));
       console.log(sessionStorage.getItem('ngoid'));

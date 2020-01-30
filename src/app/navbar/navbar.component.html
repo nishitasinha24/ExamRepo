@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adoption a Society & people Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Adoption Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="./assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="./assets/css/style.css" rel='stylesheet' type='text/css' />
+<script src="./assets/js/jquery-1.11.0.min.js"></script>
+<!--start-smoth-scrolling-->
+<script type="text/javascript" src="./assets/js/move-top.js"></script>
+<script type="text/javascript" src="./assets/js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--start-smoth-scrolling-->
+</head>
+<body>
+	<!--header-starts-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="header-main">
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-ends-->
+	<!--banner-starts-->
+	<div class="bnr">
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider4">
+			    <li>
+					<div class="banner1">
+					</div>
+				</li>
+				<li>
+					<div class="banner2">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!--banner-ends-->
+	<!--Slider-Starts-Here-->
+				<script src="./assets/js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+
+			    });
+			  </script>
+			<!--End-slider-script-->
+	<!--header-starts-->
+	<div class="header-bottom">
+	 <div class="fixed-header">
+		<div class="container">
+			<div class="top-menu">
+					<span class="menu"><img src="./assets/images/menu-icon.png" alt="" /></span>
+					<ul class="nav navbar-expand-lg fixed-top fixed-top-2 s">
+
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+          <div class="collapse navbar-collapse " class="mx-auto" id="navbarResponsive">
+            <li class="nav-item active">
+              <a class="nav-link" class="hvr-bounce-to-right active" href="index.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/about">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/faq">Faq</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/services">Services</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/typo">Blog</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" class="hvr-bounce-to-right active" routerLink="/contact">Contact</a>
+                </li>
+        		</div>
+					</ul>
+			
+					<!-- script for menu -->
+						<script>
+						$( "span.menu" ).click(function() {
+						  $( "ul.nav" ).slideToggle( "slow", function() {
+							// Animation complete.
+						  });
+						});
+					</script>
+					<!-- script for menu -->
+			</div>
+			<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-bottom").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop();
+				if(scrollpos >=navoffeset){
+					$(".header-bottom").addClass("fixed");
+				}else{
+					$(".header-bottom").removeClass("fixed");
+				}
+			 });
+
+		});
+		</script>
+		</div>
+	 </div>
+   </div>
+   </body>
+	<!--header-ends-->

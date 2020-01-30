@@ -1,4 +1,4 @@
-<form (ngSubmit)="ngoAuthenticate(myform.value)" #myform="ngForm">
+<!-- <form (ngSubmit)="ngoAuthenticate(myform.value)" #myform="ngForm">
     <div class="imgcontainer">
       <img src="https://www.brandcrowd.com/gallery/brands/pictures/picture14387721511361.jpg" alt="Avatar" class="avatar">
     </div>
@@ -23,6 +23,65 @@
   
  
     
-  </form>
+  </form> -->
+  <!-- <form (ngSubmit)="ngoAuthenticate(myform.value)" #myform="ngForm" >
+    <div class="imgcontainer">
+      <img src="https://www.brandcrowd.com/gallery/brands/pictures/picture14387721511361.jpg" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" ngModel name="email" required><br><br>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" ngModel name="password" required><br><br>
+  
+      <button type="submit" class="btn">Login</button><br><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1"><br><br>
+      <button type="button" class="cancelbtn">Cancel</button><br><br>
+      <span class="psw">Forgot <a href="#">password?</a></span><br><br>
+    </div>
+  </form> -->
 
 
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+      <div class="col-md-8 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <h3 class="login-heading mb-4">Welcome back!</h3>
+                <form (ngSubmit)="ngoAuthenticate(myform.value)" #myform="ngForm">
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" ngModel name="email" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputEmail">Email address</label>
+                  </div>
+  
+                  <div class="form-label-group">
+                    <input type="password" ngModel name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                  </div>
+  
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                  <div class="text-center">
+                    <a class="small" routerLink="/forgot-password">Forgot password?</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

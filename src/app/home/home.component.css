@@ -1,4 +1,25 @@
-div{
-    margin-left: 50;;
 
-}
+.image{
+
+     width:100%; 
+     height:100%;  
+ 
+ 
+
+    background-size:cover;
+    
+    background-image:url('src/assets/images/children.jpg');
+   
+  } 
+  .button {
+    background-color: #1c87c9;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }

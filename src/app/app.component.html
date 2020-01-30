@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
 <h1>HOME PAGE</h1>
 <div >
 <a routerLink="/home">Home</a>     |
@@ -11,4 +11,83 @@
 
 
 </body>
+<router-outlet></router-outlet> -->
+<!--banner-starts-->
+<div class="bnr">
+    <div  id="top" class="callbacks_container">
+        <ul class="rslides" id="slider4">
+            <li>
+                <div class="banner1">
+                </div>
+            </li>
+            <li>
+                <div class="banner2">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+<!--banner-ends-->
+<!--Slider-Starts-Here-->
+            <script src="./assets/js/responsiveslides.min.js"></script>
+         <script>
+            // You can also use "$(window).load(function() {"
+            jQuery(function ($) {
+              // Slideshow 4
+              $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                  $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                  $('.events').append("<li>after event fired.</li>");
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              });
+
+            });
+          </script>
+        <!--End-slider-script-->
+<app-logo></app-logo>
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>
